@@ -18,3 +18,6 @@ Mapa 1
 Pablo:  
 Logisim  
 Mapa 2  
+  
+# Links uteis  
+Criador de mapas de karnaugh -- http://www.32x8.com/
