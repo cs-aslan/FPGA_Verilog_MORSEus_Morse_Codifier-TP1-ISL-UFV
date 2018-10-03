@@ -6,214 +6,277 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x55c305a00030 .scope module, "testbench" "testbench" 2 3;
+S_0x556dff444280 .scope module, "testbench" "testbench" 2 3;
  .timescale 0 0;
-v0x55c305a2f260_0 .net "morse", 4 0, v0x55c3059c6c50_0;  1 drivers
-v0x55c305a2f340_0 .var "num", 3 0;
-v0x55c305a2f410_0 .var "rdy", 0 0;
-v0x55c305a2f510_0 .var "rst", 0 0;
-S_0x55c305a001b0 .scope module, "codificador" "codifMorse" 2 8, 3 1 0, S_0x55c305a00030;
+v0x556dff469470_0 .net "displayPonto", 4 0, L_0x556dff46a470;  1 drivers
+v0x556dff469550_0 .net "displayTraco", 4 0, L_0x556dff46a6e0;  1 drivers
+v0x556dff469630_0 .net "morse", 4 0, v0x556dff443210_0;  1 drivers
+v0x556dff469730_0 .var "num", 3 0;
+v0x556dff469800_0 .var "rdy", 0 0;
+v0x556dff4698f0_0 .var "rst", 0 0;
+L_0x556dff469b10 .part v0x556dff443210_0, 4, 1;
+L_0x556dff469d60 .part v0x556dff443210_0, 3, 1;
+L_0x556dff469f90 .part v0x556dff443210_0, 2, 1;
+L_0x556dff46a170 .part v0x556dff443210_0, 1, 1;
+L_0x556dff46a3d0 .part v0x556dff443210_0, 0, 1;
+LS_0x556dff46a470_0_0 .concat8 [ 1 1 1 1], L_0x556dff46a240, L_0x556dff46a030, L_0x556dff469e00, L_0x556dff469c00;
+LS_0x556dff46a470_0_4 .concat8 [ 1 0 0 0], L_0x556dff445ea0;
+L_0x556dff46a470 .concat8 [ 4 1 0 0], LS_0x556dff46a470_0_0, LS_0x556dff46a470_0_4;
+LS_0x556dff46a6e0_0_0 .concat8 [ 1 1 1 1], L_0x556dff46a2e0, L_0x556dff46a0d0, L_0x556dff469ea0, L_0x556dff469c70;
+LS_0x556dff46a6e0_0_4 .concat8 [ 1 0 0 0], L_0x556dff469a20;
+L_0x556dff46a6e0 .concat8 [ 4 1 0 0], LS_0x556dff46a6e0_0_0, LS_0x556dff46a6e0_0_4;
+S_0x556dff443080 .scope module, "codificador" "codifMorse" 2 10, 3 1 0, S_0x556dff444280;
  .timescale 0 0;
     .port_info 0 /INPUT 4 "num"
     .port_info 1 /OUTPUT 5 "morse"
     .port_info 2 /INPUT 1 "reset"
     .port_info 3 /INPUT 1 "ready"
-v0x55c3059c6c50_0 .var "morse", 4 0;
-v0x55c305a2ef40_0 .net "num", 3 0, v0x55c305a2f340_0;  1 drivers
-v0x55c305a2f020_0 .net "ready", 0 0, v0x55c305a2f410_0;  1 drivers
-v0x55c305a2f0f0_0 .net "reset", 0 0, v0x55c305a2f510_0;  1 drivers
-E_0x55c305a00570 .event edge, v0x55c305a2f020_0;
-E_0x55c305a00860 .event edge, v0x55c305a2f0f0_0;
-    .scope S_0x55c305a001b0;
+v0x556dff443210_0 .var "morse", 4 0;
+v0x556dff444410_0 .net "num", 3 0, v0x556dff469730_0;  1 drivers
+v0x556dff440ae0_0 .net "ready", 0 0, v0x556dff469800_0;  1 drivers
+v0x556dff441d40_0 .net "reset", 0 0, v0x556dff4698f0_0;  1 drivers
+E_0x556dff42f2c0 .event edge, v0x556dff440ae0_0;
+E_0x556dff42aa90 .event edge, v0x556dff441d40_0;
+S_0x556dff467d90 .scope module, "demuxDisplay0" "demuxSegmento" 2 16, 3 28 0, S_0x556dff444280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "controle"
+    .port_info 1 /OUTPUT 1 "ponto"
+    .port_info 2 /OUTPUT 1 "traco"
+L_0x556dff46a240 .functor BUFZ 1, L_0x556dff46a3d0, C4<0>, C4<0>, C4<0>;
+L_0x556dff46a2e0 .functor NOT 1, L_0x556dff46a3d0, C4<0>, C4<0>, C4<0>;
+v0x556dff442f40_0 .net "controle", 0 0, L_0x556dff46a3d0;  1 drivers
+v0x556dff444140_0 .net "ponto", 0 0, L_0x556dff46a240;  1 drivers
+v0x556dff445340_0 .net "traco", 0 0, L_0x556dff46a2e0;  1 drivers
+S_0x556dff468060 .scope module, "demuxDisplay1" "demuxSegmento" 2 15, 3 28 0, S_0x556dff444280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "controle"
+    .port_info 1 /OUTPUT 1 "ponto"
+    .port_info 2 /OUTPUT 1 "traco"
+L_0x556dff46a030 .functor BUFZ 1, L_0x556dff46a170, C4<0>, C4<0>, C4<0>;
+L_0x556dff46a0d0 .functor NOT 1, L_0x556dff46a170, C4<0>, C4<0>, C4<0>;
+v0x556dff468280_0 .net "controle", 0 0, L_0x556dff46a170;  1 drivers
+v0x556dff468340_0 .net "ponto", 0 0, L_0x556dff46a030;  1 drivers
+v0x556dff468400_0 .net "traco", 0 0, L_0x556dff46a0d0;  1 drivers
+S_0x556dff468520 .scope module, "demuxDisplay2" "demuxSegmento" 2 14, 3 28 0, S_0x556dff444280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "controle"
+    .port_info 1 /OUTPUT 1 "ponto"
+    .port_info 2 /OUTPUT 1 "traco"
+L_0x556dff469e00 .functor BUFZ 1, L_0x556dff469f90, C4<0>, C4<0>, C4<0>;
+L_0x556dff469ea0 .functor NOT 1, L_0x556dff469f90, C4<0>, C4<0>, C4<0>;
+v0x556dff468740_0 .net "controle", 0 0, L_0x556dff469f90;  1 drivers
+v0x556dff468820_0 .net "ponto", 0 0, L_0x556dff469e00;  1 drivers
+v0x556dff4688e0_0 .net "traco", 0 0, L_0x556dff469ea0;  1 drivers
+S_0x556dff468a30 .scope module, "demuxDisplay3" "demuxSegmento" 2 13, 3 28 0, S_0x556dff444280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "controle"
+    .port_info 1 /OUTPUT 1 "ponto"
+    .port_info 2 /OUTPUT 1 "traco"
+L_0x556dff469c00 .functor BUFZ 1, L_0x556dff469d60, C4<0>, C4<0>, C4<0>;
+L_0x556dff469c70 .functor NOT 1, L_0x556dff469d60, C4<0>, C4<0>, C4<0>;
+v0x556dff468ca0_0 .net "controle", 0 0, L_0x556dff469d60;  1 drivers
+v0x556dff468d80_0 .net "ponto", 0 0, L_0x556dff469c00;  1 drivers
+v0x556dff468e40_0 .net "traco", 0 0, L_0x556dff469c70;  1 drivers
+S_0x556dff468f60 .scope module, "demuxDisplay4" "demuxSegmento" 2 12, 3 28 0, S_0x556dff444280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "controle"
+    .port_info 1 /OUTPUT 1 "ponto"
+    .port_info 2 /OUTPUT 1 "traco"
+L_0x556dff445ea0 .functor BUFZ 1, L_0x556dff469b10, C4<0>, C4<0>, C4<0>;
+L_0x556dff469a20 .functor NOT 1, L_0x556dff469b10, C4<0>, C4<0>, C4<0>;
+v0x556dff469180_0 .net "controle", 0 0, L_0x556dff469b10;  1 drivers
+v0x556dff469260_0 .net "ponto", 0 0, L_0x556dff445ea0;  1 drivers
+v0x556dff469320_0 .net "traco", 0 0, L_0x556dff469a20;  1 drivers
+    .scope S_0x556dff443080;
 T_0 ;
-    %wait E_0x55c305a00860;
+    %wait E_0x556dff42aa90;
     %pushi/vec4 0, 0, 5;
-    %store/vec4 v0x55c3059c6c50_0, 0, 5;
+    %store/vec4 v0x556dff443210_0, 0, 5;
     %jmp T_0;
     .thread T_0, $push;
-    .scope S_0x55c305a001b0;
+    .scope S_0x556dff443080;
 T_1 ;
-    %wait E_0x55c305a00570;
-    %load/vec4 v0x55c305a2f0f0_0;
+    %wait E_0x556dff42f2c0;
+    %load/vec4 v0x556dff441d40_0;
     %inv;
     %flag_set/vec4 8;
     %jmp/0xz  T_1.0, 8;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
     %inv;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
     %and;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
     %inv;
     %and;
     %or;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 3, 3;
     %inv;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
     %inv;
     %and;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 0, 2;
     %and;
     %or;
-    %ix/load 4, 0, 0;
+    %ix/load 4, 4, 0;
     %flag_set/imm 4, 0;
-    %store/vec4 v0x55c3059c6c50_0, 4, 1;
-    %load/vec4 v0x55c305a2ef40_0;
+    %store/vec4 v0x556dff443210_0, 4, 1;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
     %inv;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
     %and;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 0, 2;
     %inv;
     %and;
     %or;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
-    %inv;
-    %and;
-    %or;
-    %ix/load 4, 1, 0;
-    %flag_set/imm 4, 0;
-    %store/vec4 v0x55c3059c6c50_0, 4, 1;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 1, 2;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 0, 2;
-    %and;
-    %or;
-    %ix/load 4, 2, 0;
-    %flag_set/imm 4, 0;
-    %store/vec4 v0x55c3059c6c50_0, 4, 1;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 3, 3;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 0, 2;
     %inv;
     %and;
     %or;
     %ix/load 4, 3, 0;
     %flag_set/imm 4, 0;
-    %store/vec4 v0x55c3059c6c50_0, 4, 1;
-    %load/vec4 v0x55c305a2ef40_0;
-    %parti/s 1, 3, 3;
-    %load/vec4 v0x55c305a2ef40_0;
+    %store/vec4 v0x556dff443210_0, 4, 1;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 1, 2;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 0, 2;
     %and;
     %or;
-    %load/vec4 v0x55c305a2ef40_0;
+    %ix/load 4, 2, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v0x556dff443210_0, 4, 1;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 2, 3;
-    %load/vec4 v0x55c305a2ef40_0;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 3, 3;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 0, 2;
+    %inv;
+    %and;
+    %or;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v0x556dff443210_0, 4, 1;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 3, 3;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 2, 3;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 0, 2;
+    %and;
+    %or;
+    %load/vec4 v0x556dff444410_0;
+    %parti/s 1, 2, 3;
+    %load/vec4 v0x556dff444410_0;
     %parti/s 1, 1, 2;
     %and;
     %or;
-    %ix/load 4, 4, 0;
+    %ix/load 4, 0, 0;
     %flag_set/imm 4, 0;
-    %store/vec4 v0x55c3059c6c50_0, 4, 1;
+    %store/vec4 v0x556dff443210_0, 4, 1;
 T_1.0 ;
     %jmp T_1;
     .thread T_1, $push;
-    .scope S_0x55c305a00030;
+    .scope S_0x556dff444280;
 T_2 ;
-    %vpi_call 2 11 "$dumpfile", "codifMorse.vcd" {0 0 0};
-    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55c305a00030 {0 0 0};
-    %vpi_call 2 13 "$display", "Equivalente em morse (0 = Tra\303\247o, 1 = Ponto)? " {0 0 0};
-    %vpi_call 2 14 "$monitor", "%d = %b %b %b %b %b", v0x55c305a2f340_0, &PV<v0x55c305a2f260_0, 0, 1>, &PV<v0x55c305a2f260_0, 1, 1>, &PV<v0x55c305a2f260_0, 2, 1>, &PV<v0x55c305a2f260_0, 3, 1>, &PV<v0x55c305a2f260_0, 4, 1> {0 0 0};
+    %vpi_call 2 19 "$dumpfile", "codifMorse.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x556dff444280 {0 0 0};
+    %vpi_call 2 21 "$display", "Equivalente em morse (0 = Tra\303\247o, 1 = Ponto)? " {0 0 0};
+    %vpi_call 2 22 "$monitor", "%d = %b %b %b %b %b", v0x556dff469730_0, &PV<v0x556dff469630_0, 4, 1>, &PV<v0x556dff469630_0, 3, 1>, &PV<v0x556dff469630_0, 2, 1>, &PV<v0x556dff469630_0, 1, 1>, &PV<v0x556dff469630_0, 0, 1> {0 0 0};
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f510_0, 0, 1;
+    %store/vec4 v0x556dff4698f0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f510_0, 0, 1;
+    %store/vec4 v0x556dff4698f0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 1, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 2, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 3, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 4, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 5, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 6, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 7, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 8, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 9, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %pushi/vec4 0, 0, 4;
-    %store/vec4 v0x55c305a2f340_0, 0, 4;
+    %store/vec4 v0x556dff469730_0, 0, 4;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x55c305a2f410_0, 0, 1;
+    %store/vec4 v0x556dff469800_0, 0, 1;
     %delay 1, 0;
-    %vpi_call 2 30 "$finish" {0 0 0};
+    %vpi_call 2 38 "$finish" {0 0 0};
     %end;
     .thread T_2;
 # The file index is used to find the file name in the following table.

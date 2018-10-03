@@ -15,8 +15,8 @@ WAVER= gtkwave
 all:
 	$(CC) $(SRC) -o $(TARGET) $(WARN)
 
-dump:
+run:
 	$(CCDUMP) $(TARGET)
 
-show:
+wave:
 	$(WAVER) $(DUMP)

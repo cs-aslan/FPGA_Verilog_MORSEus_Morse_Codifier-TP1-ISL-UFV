@@ -15,11 +15,11 @@ module codifMorse (num, morse, reset, ready);
     end
     always @ (ready) begin
         if (~reset) begin
-          morse[0] = (~num[2] & num[1]) | (num[2] & ~num[1]) | (~num[3] & ~num[2] & num[0]);
-          morse[1] = (~num[2] & num[1]) | (num[1] & ~num[0]) | (num[2] & ~num[1]);
+          morse[4] = (~num[2] & num[1]) | (num[2] & ~num[1]) | (~num[3] & ~num[2] & num[0]);
+          morse[3] = (~num[2] & num[1]) | (num[1] & ~num[0]) | (num[2] & ~num[1]);
           morse[2] = num[2] | (num[1] & num[0]);
-          morse[3] = num[2] | (num[3] & ~num[0]);
-          morse[4] = num[3] | (num[2] & num[0]) | (num[2] & num[1]);
+          morse[1] = num[2] | (num[3] & ~num[0]);
+          morse[0] = num[3] | (num[2] & num[0]) | (num[2] & num[1]);
 
         end
     end
@@ -31,6 +31,6 @@ module demuxSegmento (controle, ponto, traco);
     output wire ponto, traco;
 
     assign ponto = controle;
-    assign traco = ~controle; 
+    assign traco = ~controle;
 
 endmodule
