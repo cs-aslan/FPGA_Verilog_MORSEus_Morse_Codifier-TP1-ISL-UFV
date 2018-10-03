@@ -24,3 +24,13 @@ module codifMorse (num, morse, reset, ready);
         end
     end
 endmodule // divisivel
+
+module demuxSegmento (controle, ponto, traco);
+
+    input wire controle;
+    output wire ponto, traco;
+
+    assign ponto = controle;
+    assign traco = ~controle; 
+
+endmodule
