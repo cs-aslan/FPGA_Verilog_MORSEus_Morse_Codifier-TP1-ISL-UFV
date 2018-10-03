@@ -1,28 +1,30 @@
-`include "divisivel.v"
-//`timescale time / time
+`include "codifMorse.v"
 
 module testbench ();
-    reg a, b, c, rst, rdy;
-    wire out;
+    reg[3:0] num;
+    reg rst, rdy;
+    wire[4:0] morse;
 
-    divisivel moduloDivisivel1 (.a(a), .b(b), .c(c), .reset(rst), .ready(rdy), .out(out));
+    codifMorse codificador (.num(num), .reset(rst), .ready(rdy), .morse(morse));
 
     initial begin
-      $dumpfile("divisivel.vcd");
+      $dumpfile("codifMorse.vcd");
       $dumpvars(0, testbench);
-      $display("Numero é divsivel por 2? ");
-      $monitor("%b%b%b = %b", a, b, c, out);
+      $display("Equivalente em morse (0 = Traço, 1 = Ponto)? ");
+      $monitor("%d = %b %b %b %b %b", num, morse[0], morse[1], morse[2], morse[3], morse[4]);
 
           rst = 1;
       #1; rst = 0;
-      #1; rdy = 0; a = 0; b = 0; c = 0; rdy = 1;
-      #1; rdy = 0; a = 0; b = 0; c = 1; rdy = 1;
-      #1; rdy = 0; a = 0; b = 1; c = 0; rdy = 1;
-      #1; rdy = 0; a = 0; b = 1; c = 1; rdy = 1;
-      #1; rdy = 0; a = 1; b = 0; c = 0; rdy = 1;
-      #1; rdy = 0; a = 1; b = 0; c = 1; rdy = 1;
-      #1; rdy = 0; a = 1; b = 1; c = 0; rdy = 1;
-      #1; rdy = 0; a = 1; b = 1; c = 1; rdy = 1;
+      #1; rdy = 0; num = 1; rdy = 1;
+      #1; rdy = 0; num = 2; rdy = 1;
+      #1; rdy = 0; num = 3; rdy = 1;
+      #1; rdy = 0; num = 4; rdy = 1;
+      #1; rdy = 0; num = 5; rdy = 1;
+      #1; rdy = 0; num = 6; rdy = 1;
+      #1; rdy = 0; num = 7; rdy = 1;
+      #1; rdy = 0; num = 8; rdy = 1;
+      #1; rdy = 0; num = 9; rdy = 1;
+      #1; rdy = 0; num = 0; rdy = 1;
       #1;
 
       $finish;
