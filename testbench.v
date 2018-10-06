@@ -18,14 +18,17 @@ module testbench ();
     initial begin
       $dumpfile("codifMorse.vcd");
       $dumpvars(0, testbench);
-      $display("\nNúmero -- Equivalente em morse:\n");
+
+      $display("\n########################################################################################################");
+		  $display("#                            Bem-vindo ao MORSEuS, decodificador de codigo morse                       #");
+		  $display("########################################################################################################\n");
 
       rst = 1; rst = 0;
 
 rdy = 0; num = 1; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
       $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
-    
+
 rdy = 0; num = 2; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
       $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
@@ -165,6 +168,9 @@ rdy = 0; num = 34; rdy = 1; #1;
 rdy = 0; num = 35; rdy = 1; #1;
       $display("\n   [CARACTERE] = Z");
       $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+
+		  $display("\n########################################################################################################");
+
       $finish;
 
     end
