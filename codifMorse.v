@@ -50,29 +50,17 @@ module codifMorse (num, morse, display, reset, ready);
     end
 endmodule // divisivel
 
-module demuxDisplay (num, display, ponto, traco, ready);
+module demuxDisplay (
+    input wire num,
+    input wire display,
+    input wire ready,
 
-    input wire[4:0] num;
-    input wire[4:0] display;
-    input wire ready;
+    output wire ponto,
+    output wire traco
+);
 
-    output wire[4:0] ponto;
-    output wire[4:0] traco;
-
-    assign  traco[4] = (display[4] & ~num[4]);
-    assign  ponto[4] = (display[4] & num[4]);
-
-    assign  traco[3] = (display[3] & ~num[3]);
-    assign  ponto[3] = (display[3] & num[3]);
-
-    assign  traco[2] = (display[2] & ~num[2]);
-    assign  ponto[2] = (display[2] & num[2]);
-
-    assign  traco[1] = (display[1] & ~num[1]);
-    assign  ponto[1] = (display[1] & num[1]);
-
-    assign  traco[0] = (display[0] & ~num[0]);
-    assign  ponto[0] = (display[0] & num[0]);
+    assign  traco = (display & ~num);
+    assign  ponto = (display & num);
 
 
 endmodule
