@@ -1,0 +1,344 @@
+|MORSEus__DE2115
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => num[0].IN1
+SW[13] => num[1].IN1
+SW[14] => num[2].IN1
+SW[15] => num[3].IN1
+SW[16] => num[4].IN1
+SW[17] => num[5].IN1
+HEX0[0] << sevSeg:demuxfpga0.display
+HEX0[1] << sevSeg:demuxfpga0.display
+HEX0[2] << sevSeg:demuxfpga0.display
+HEX0[3] << sevSeg:demuxfpga0.display
+HEX0[4] << sevSeg:demuxfpga0.display
+HEX0[5] << sevSeg:demuxfpga0.display
+HEX0[6] << sevSeg:demuxfpga0.display
+HEX1[0] << sevSeg:demuxfpga1.display
+HEX1[1] << sevSeg:demuxfpga1.display
+HEX1[2] << sevSeg:demuxfpga1.display
+HEX1[3] << sevSeg:demuxfpga1.display
+HEX1[4] << sevSeg:demuxfpga1.display
+HEX1[5] << sevSeg:demuxfpga1.display
+HEX1[6] << sevSeg:demuxfpga1.display
+HEX2[0] << sevSeg:demuxfpga2.display
+HEX2[1] << sevSeg:demuxfpga2.display
+HEX2[2] << sevSeg:demuxfpga2.display
+HEX2[3] << sevSeg:demuxfpga2.display
+HEX2[4] << sevSeg:demuxfpga2.display
+HEX2[5] << sevSeg:demuxfpga2.display
+HEX2[6] << sevSeg:demuxfpga2.display
+HEX3[0] << sevSeg:demuxfpga3.display
+HEX3[1] << sevSeg:demuxfpga3.display
+HEX3[2] << sevSeg:demuxfpga3.display
+HEX3[3] << sevSeg:demuxfpga3.display
+HEX3[4] << sevSeg:demuxfpga3.display
+HEX3[5] << sevSeg:demuxfpga3.display
+HEX3[6] << sevSeg:demuxfpga3.display
+HEX4[0] << sevSeg:demuxfpga4.display
+HEX4[1] << sevSeg:demuxfpga4.display
+HEX4[2] << sevSeg:demuxfpga4.display
+HEX4[3] << sevSeg:demuxfpga4.display
+HEX4[4] << sevSeg:demuxfpga4.display
+HEX4[5] << sevSeg:demuxfpga4.display
+HEX4[6] << sevSeg:demuxfpga4.display
+HEX5[0] << desligaSeg:desligaDisFPGA.display
+HEX5[1] << desligaSeg:desligaDisFPGA.display
+HEX5[2] << desligaSeg:desligaDisFPGA.display
+HEX5[3] << desligaSeg:desligaDisFPGA.display
+HEX5[4] << desligaSeg:desligaDisFPGA.display
+HEX5[5] << desligaSeg:desligaDisFPGA.display
+HEX5[6] << desligaSeg:desligaDisFPGA.display
+HEX6[0] << desligaSeg:desligaDisFPGA2.display
+HEX6[1] << desligaSeg:desligaDisFPGA2.display
+HEX6[2] << desligaSeg:desligaDisFPGA2.display
+HEX6[3] << desligaSeg:desligaDisFPGA2.display
+HEX6[4] << desligaSeg:desligaDisFPGA2.display
+HEX6[5] << desligaSeg:desligaDisFPGA2.display
+HEX6[6] << desligaSeg:desligaDisFPGA2.display
+HEX7[0] << desligaSeg:desligaDisFPGA1.display
+HEX7[1] << desligaSeg:desligaDisFPGA1.display
+HEX7[2] << desligaSeg:desligaDisFPGA1.display
+HEX7[3] << desligaSeg:desligaDisFPGA1.display
+HEX7[4] << desligaSeg:desligaDisFPGA1.display
+HEX7[5] << desligaSeg:desligaDisFPGA1.display
+HEX7[6] << desligaSeg:desligaDisFPGA1.display
+
+
+|MORSEus__DE2115|codifMorse:codificador
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN0
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN0
+num[0] => display.IN0
+num[0] => display.IN0
+num[0] => display.IN0
+num[0] => display.IN1
+num[0] => display.IN1
+num[0] => display.IN1
+num[0] => display.IN1
+num[0] => display.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => morse.IN1
+num[0] => display.IN0
+num[0] => display.IN0
+num[0] => display.IN1
+num[0] => display.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN0
+num[1] => morse.IN0
+num[1] => display.IN1
+num[1] => display.IN1
+num[1] => display.IN1
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN0
+num[1] => morse.IN1
+num[1] => morse.IN0
+num[1] => morse.IN1
+num[1] => morse.IN1
+num[1] => morse.IN0
+num[1] => display.IN0
+num[1] => display.IN0
+num[1] => display.IN1
+num[1] => display.IN1
+num[1] => display.IN0
+num[1] => display.IN1
+num[2] => morse.IN0
+num[2] => morse.IN1
+num[2] => morse.IN1
+num[2] => morse.IN0
+num[2] => morse.IN1
+num[2] => morse.IN0
+num[2] => morse.IN1
+num[2] => morse.IN1
+num[2] => morse.IN1
+num[2] => morse.IN0
+num[2] => morse.IN1
+num[2] => morse.IN1
+num[2] => morse.IN0
+num[2] => morse.IN0
+num[2] => display.IN0
+num[2] => display.IN1
+num[2] => display.IN1
+num[2] => display.IN1
+num[2] => display.IN0
+num[3] => morse.IN1
+num[3] => morse.IN0
+num[3] => morse.IN0
+num[3] => morse.IN1
+num[3] => morse.IN1
+num[3] => morse.IN0
+num[3] => morse.IN0
+num[3] => morse.IN0
+num[3] => morse.IN1
+num[3] => display.IN1
+num[3] => display.IN1
+num[3] => display.IN1
+num[4] => morse.IN1
+num[4] => morse.IN1
+num[4] => morse.IN1
+num[4] => morse.IN1
+num[4] => morse.IN1
+num[4] => display.IN1
+num[4] => morse.IN1
+num[4] => morse.IN1
+num[4] => morse.IN0
+num[4] => morse.IN1
+num[4] => display.IN1
+num[4] => display.IN1
+num[4] => display.IN1
+num[5] => morse.IN1
+num[5] => morse.IN1
+num[5] => morse.IN1
+num[5] => morse.IN1
+num[5] => morse.IN1
+morse[0] <= morse[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+morse[1] <= morse[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+morse[2] <= morse[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+morse[3] <= morse[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+morse[4] <= morse[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= display[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+reset => morse[0]$latch.ACLR
+reset => morse[1]$latch.ACLR
+reset => morse[2]$latch.ACLR
+reset => morse[3]$latch.ACLR
+reset => morse[4]$latch.ACLR
+reset => always0.IN0
+ready => always0.IN1
+
+
+|MORSEus__DE2115|demuxDisplay:demux4
+num => ponto.IN0
+num => traco.IN0
+display => traco.IN1
+display => ponto.IN1
+ready => ~NO_FANOUT~
+ponto <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+traco <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|demuxDisplay:demux3
+num => ponto.IN0
+num => traco.IN0
+display => traco.IN1
+display => ponto.IN1
+ready => ~NO_FANOUT~
+ponto <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+traco <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|demuxDisplay:demux2
+num => ponto.IN0
+num => traco.IN0
+display => traco.IN1
+display => ponto.IN1
+ready => ~NO_FANOUT~
+ponto <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+traco <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|demuxDisplay:demux1
+num => ponto.IN0
+num => traco.IN0
+display => traco.IN1
+display => ponto.IN1
+ready => ~NO_FANOUT~
+ponto <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+traco <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|demuxDisplay:demux0
+num => ponto.IN0
+num => traco.IN0
+display => traco.IN1
+display => ponto.IN1
+ready => ~NO_FANOUT~
+ponto <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+traco <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|sevSeg:demuxfpga4
+ponto => display[3].DATAIN
+traco => display[6].DATAIN
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|sevSeg:demuxfpga3
+ponto => display[3].DATAIN
+traco => display[6].DATAIN
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|sevSeg:demuxfpga2
+ponto => display[3].DATAIN
+traco => display[6].DATAIN
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|sevSeg:demuxfpga1
+ponto => display[3].DATAIN
+traco => display[6].DATAIN
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|sevSeg:demuxfpga0
+ponto => display[3].DATAIN
+traco => display[6].DATAIN
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= ponto.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= traco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MORSEus__DE2115|desligaSeg:desligaDisFPGA1
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= <VCC>
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= <VCC>
+
+
+|MORSEus__DE2115|desligaSeg:desligaDisFPGA2
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= <VCC>
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= <VCC>
+
+
+|MORSEus__DE2115|desligaSeg:desligaDisFPGA
+display[0] <= <VCC>
+display[1] <= <VCC>
+display[2] <= <VCC>
+display[3] <= <VCC>
+display[4] <= <VCC>
+display[5] <= <VCC>
+display[6] <= <VCC>
+
+

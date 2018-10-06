@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at codifMorse.v(16): always construct contains both blocking and non-blocking assignments File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16

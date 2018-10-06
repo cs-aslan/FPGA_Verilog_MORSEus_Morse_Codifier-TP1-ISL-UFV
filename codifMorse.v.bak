@@ -5,7 +5,7 @@ module codifMorse (num, morse, display, reset, ready);
                                                                                                                                                                                                                                                             // C = num[3]
                                                                                                                                                                                                                                                             // D = num [2]
                                                                                                                                                                                                                                                             // E = num[1]
- // F = num[0]
+                                                                                                                                                                                                                                                            // F = num[0]
 
     input reset;
     input ready;
@@ -13,8 +13,11 @@ module codifMorse (num, morse, display, reset, ready);
     output reg[4:0] morse;
     output reg[4:0] display;
 
-    always @(ready, ready) begin
-        if (~reset & ready) begin
+    always @ (reset) begin
+        morse = 0;
+    end
+    always @ (ready) begin
+        if (~reset) begin
 
           morse[4] <= (num[3] & num[2] & num[1]) | (num[4] & ~num[2] & num[0]) | (num[5] & ~num[1] & ~num[0]) |
                       (~num[5] & ~num[3] & ~num[1] & num[0]) | (~num[5] & ~num[3] & ~num[2] & num[1]) | (~num[4] & ~num[3] & num[2] & ~num[1]) |
@@ -44,16 +47,8 @@ module codifMorse (num, morse, display, reset, ready);
           display[0] <= (~num[5] & ~num[4] & ~num[3]) | (~num[5] & ~num[4] & ~num[2] & ~num[1]);
 
         end
-
-      if(reset) begin
-         morse[4] <= 0;
-  			 morse[3] <= 0;
-  			 morse[2] <= 0;
-  			 morse[1] <= 0;
-  			 morse[0] <= 0;
-      end
     end
-endmodule
+endmodule // divisivel
 
 module demuxDisplay (
     input wire num,
@@ -67,33 +62,5 @@ module demuxDisplay (
     assign  traco = (display & ~num);
     assign  ponto = (display & num);
 
-
-endmodule
-
-module sevSeg(
-	 input wire ponto,
-	 input wire traco,
-	 output wire [6:0] display
-	 );
-
-	 assign display[0] = 1;
-	 assign display[1] = 1;
-	 assign display[2] = 1;
-	 assign display[3] = ~ponto;
-	 assign display[4] = 1;
-	 assign display[5] = 1;
-	 assign display[6] = ~traco;
-
-endmodule
-
-module desligaSeg(output wire [6:0] display);
-
-	 assign display[0] = 1;
-	 assign display[1] = 1;
-	 assign display[2] = 1;
-	 assign display[3] = 1;
-	 assign display[4] = 1;
-	 assign display[5] = 1;
-	 assign display[6] = 1;
 
 endmodule
