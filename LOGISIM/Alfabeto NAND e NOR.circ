@@ -711,6 +711,7 @@
       <a name="inputs" val="4"/>
       <a name="negate3" val="true"/>
     </comp>
+    <comp lib="5" loc="(1270,430)" name="7-Segment Display"/>
     <comp lib="1" loc="(580,980)" name="NAND Gate">
       <a name="inputs" val="3"/>
       <a name="negate1" val="true"/>
@@ -752,10 +753,6 @@
       <a name="inputs" val="3"/>
       <a name="negate1" val="true"/>
     </comp>
-    <comp lib="6" loc="(1253,213)" name="Text">
-      <a name="text" val="Ponto"/>
-      <a name="font" val="SansSerif plain 20"/>
-    </comp>
     <comp lib="1" loc="(770,330)" name="NAND Gate">
       <a name="inputs" val="8"/>
     </comp>
@@ -787,7 +784,6 @@
       <a name="color" val="#f00003"/>
       <a name="offcolor" val="#ffffff"/>
     </comp>
-    <comp lib="5" loc="(1270,430)" name="7-Segment Display"/>
     <comp lib="1" loc="(580,3030)" name="NAND Gate">
       <a name="inputs" val="3"/>
     </comp>
@@ -911,6 +907,10 @@
       <a name="text" val="MORSE [4]"/>
       <a name="font" val="SansSerif plain 26"/>
     </comp>
+    <comp lib="6" loc="(1559,468)" name="Text">
+      <a name="text" val="Traço"/>
+      <a name="font" val="SansSerif plain 20"/>
+    </comp>
     <comp lib="1" loc="(980,1140)" name="NOR Gate">
       <a name="inputs" val="2"/>
       <a name="negate0" val="true"/>
@@ -921,6 +921,10 @@
       <a name="negate0" val="true"/>
       <a name="negate1" val="true"/>
       <a name="negate3" val="true"/>
+    </comp>
+    <comp lib="6" loc="(1558,405)" name="Text">
+      <a name="text" val="Ponto"/>
+      <a name="font" val="SansSerif plain 20"/>
     </comp>
     <comp lib="5" loc="(1480,430)" name="7-Segment Display"/>
     <comp lib="5" loc="(1410,430)" name="7-Segment Display"/>
@@ -968,10 +972,6 @@
       <a name="facing" val="north"/>
       <a name="color" val="#f00003"/>
       <a name="offcolor" val="#ffffff"/>
-    </comp>
-    <comp lib="6" loc="(1553,379)" name="Text">
-      <a name="text" val="Traço"/>
-      <a name="font" val="SansSerif plain 20"/>
     </comp>
     <comp lib="1" loc="(580,4220)" name="NOR Gate">
       <a name="inputs" val="4"/>
