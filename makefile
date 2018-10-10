@@ -12,6 +12,8 @@ CCDUMP= vvp
 
 WAVER= gtkwave
 
+LOG= logisim
+
 all:
 	$(CC) $(SRC) -o $(TARGET) $(WARN)
 
@@ -20,3 +22,10 @@ run:
 
 wave:
 	$(WAVER) $(DUMP)
+
+logi:
+	$(LOG) LOGISIM/Normal.circ
+
+loginand:
+	$(LOG) LOGISIM/NAND\ e\ NOR.circ
+
