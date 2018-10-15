@@ -27,44 +27,43 @@ module testbench ();
 
 rdy = 0; num = 1; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 2; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 3; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 4; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 5; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 6; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 7; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 8; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 9; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 0; rdy = 1; #1;
       $display("\n   [CARACTERE] = %d",num);
-      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+      $display("   [MORSE//PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
 rdy = 0; num = 10; rdy = 1; #1;
       $display("\n   [CARACTERE] = A");

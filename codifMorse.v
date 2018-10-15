@@ -1,11 +1,12 @@
 module codifMorse (num, morse, display, reset, ready);
 
-                                                                                                                                                                                                                                                            // A = num[5]
-                                                                                                                                                                                                                                                            // B = num[4]
-                                                                                                                                                                                                                                                            // C = num[3]
-                                                                                                                                                                                                                                                            // D = num [2]
-                                                                                                                                                                                                                                                            // E = num[1]
- // F = num[0]
+// Equivalentes aos mapas de Karnaugh e equacoes booleanas:
+// A = num[5]
+// B = num[4]
+// C = num[3]
+// D = num[2]
+// E = num[1]
+// F = num[0]
 
     input reset;
     input ready;
@@ -15,7 +16,8 @@ module codifMorse (num, morse, display, reset, ready);
 
     always @(ready, ready) begin
         if (~reset & ready) begin
-
+	
+	  //morse[x] indica se o morse é um ponto (sinal verdadeiro) ou traco (sinal falso)
           morse[4] <= (num[3] & num[2] & num[1]) | (num[4] & ~num[2] & num[0]) | (num[5] & ~num[1] & ~num[0]) |
                       (~num[5] & ~num[3] & ~num[1] & num[0]) | (~num[5] & ~num[3] & ~num[2] & num[1]) | (~num[4] & ~num[3] & num[2] & ~num[1]) |
                       (~num[4] & num[3] & num[1] & ~num[0]) | (num[4] & num[3] & num[2] & ~num[0]);
@@ -32,6 +34,7 @@ module codifMorse (num, morse, display, reset, ready);
           morse[0] <= (num[3]) | (num[2] & num[0]) | (num[2] & num[1]);
 
 
+	  //display[x] indica que aquele ponto/traco deve ser considerado ou nao. Verdadeiro se sim, falso se nao
           display[4] <= 1;
 
           display[3] <= (~num[3]) | (~num[2]) | (~num[4] & ~num[1]) | (num[1] & num[0]) | (num[4] & ~num[0]);
@@ -47,15 +50,19 @@ module codifMorse (num, morse, display, reset, ready);
 
       if(reset) begin
          morse[4] <= 0;
-  			 morse[3] <= 0;
-  			 morse[2] <= 0;
-  			 morse[1] <= 0;
-  			 morse[0] <= 0;
+  	 morse[3] <= 0;
+  	 morse[2] <= 0;
+  	 morse[1] <= 0;
+  	 morse[0] <= 0;
+
       end
+
     end
+
 endmodule
 
 module demuxDisplay (
+    //modulo responsavel por transformar uma entrada de morse[x] em display[x] nas saidas para serem ligadas onde sera representado ponto e o traco
     input wire num,
     input wire display,
     input wire ready,
@@ -71,6 +78,7 @@ module demuxDisplay (
 endmodule
 
 module sevSeg(
+	 //modulo inversor necessario pois na FPGA 1 e desligado, 0 ligado
 	 input wire ponto,
 	 input wire traco,
 	 output wire [6:0] display
@@ -87,7 +95,7 @@ module sevSeg(
 endmodule
 
 module desligaSeg(output wire [6:0] display);
-
+	 //desliga totalmente um display da FPGA
 	 assign display[0] = 1;
 	 assign display[1] = 1;
 	 assign display[2] = 1;
