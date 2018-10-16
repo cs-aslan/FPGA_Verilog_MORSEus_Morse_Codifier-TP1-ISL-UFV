@@ -14,8 +14,9 @@ module codifMorse (num, morse, display, reset, ready);
     output reg[4:0] morse;
     output reg[4:0] display;
 
-    always @(ready, ready) begin
-        if (~reset & ready) begin
+    always @(ready, reset) begin   
+
+	if (~reset & ready) begin
 	
 	  //morse[x] indica se o morse é um ponto (sinal verdadeiro) ou traco (sinal falso)
           morse[4] <= (num[3] & num[2] & num[1]) | (num[4] & ~num[2] & num[0]) | (num[5] & ~num[1] & ~num[0]) |
@@ -48,14 +49,22 @@ module codifMorse (num, morse, display, reset, ready);
 
         end
 
-      if(reset) begin
-         morse[4] <= 0;
-  	 morse[3] <= 0;
-  	 morse[2] <= 0;
-  	 morse[1] <= 0;
-  	 morse[0] <= 0;
+      	if(reset) begin
+		 
+		 //Zera todas as saídas se o usuário apertar o reset
+		 morse[4] <= 0;
+		 morse[3] <= 0;
+		 morse[2] <= 0;
+		 morse[1] <= 0;
+		 morse[0] <= 0;
 
-      end
+		 display[4] <= 0;
+		 display[3] <= 0;
+		 display[2] <= 0;
+		 display[1] <= 0;
+		 display[0] <= 0;
+
+	      end     
 
     end
 

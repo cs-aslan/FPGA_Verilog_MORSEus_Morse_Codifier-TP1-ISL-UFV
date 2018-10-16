@@ -168,6 +168,10 @@ rdy = 0; num = 35; rdy = 1; #1;
       $display("\n   [CARACTERE] = Z");
       $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", ponto[4], ponto[3], ponto[2], ponto[1], ponto[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
 
+rdy = 0; rst=1; #1; rst=0; #1;
+      $display("\n   [RESET]");
+      $display("   [PONTO] = %b %b %b %b %b \n   [TRACO] = %b %b %b %b %b \n", morse[4], morse[3], morse[2], morse[1], morse[0], traco[4], traco[3], traco[2], traco[1], traco[0]);
+
 		  $display("\n########################################################################################################");
 
       $finish;
