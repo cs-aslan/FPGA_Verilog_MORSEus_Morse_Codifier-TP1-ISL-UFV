@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MORSEus__DE2115
-Sat Oct 06 12:14:53 2018
+Mon Oct 15 21:21:03 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -34,7 +34,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                                       ;
 +---------------------------+------------------------------------------------------+
-; EDA Netlist Writer Status ; No Output Files Generated - Sat Oct 06 12:14:53 2018 ;
+; EDA Netlist Writer Status ; No Output Files Generated - Mon Oct 15 21:21:03 2018 ;
 ; Revision Name             ; MORSEus__DE2115                                      ;
 ; Top-level Entity Name     ; MORSEus__DE2115                                      ;
 ; Family                    ; Cyclone IV E                                         ;
@@ -47,13 +47,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct 06 12:14:52 2018
+    Info: Processing started: Mon Oct 15 21:21:02 2018
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off MORSEus__DE2115 -c MORSEus__DE2115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Warning (199027): Can't generate output files. Specify command-line options to generate output files, or update EDA tool settings using GUI or Tcl script.
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Sat Oct 06 12:14:53 2018
+    Info: Processing ended: Mon Oct 15 21:21:03 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

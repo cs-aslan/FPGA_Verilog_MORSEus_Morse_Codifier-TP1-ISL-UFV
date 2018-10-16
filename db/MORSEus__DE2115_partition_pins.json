@@ -44,7 +44,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[15]",
+					"name" : "SW[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
@@ -52,11 +60,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[12]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[13]",
+					"name" : "SW[15]",
 					"strict" : false
 				},
 				{
@@ -68,11 +72,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[16]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[17]",
+					"name" : "SW[12]",
 					"strict" : false
 				}
 			]

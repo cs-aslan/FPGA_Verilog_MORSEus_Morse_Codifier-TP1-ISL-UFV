@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Oct 06 12:14:04 2018
+Analysis & Synthesis Status : Successful - Mon Oct 15 21:19:57 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : MORSEus__DE2115
 Top-level Entity Name : MORSEus__DE2115
 Family : Cyclone IV E
-Total logic elements : 47
-    Total combinational functions : 47
+Total logic elements : 49
+    Total combinational functions : 49
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 74

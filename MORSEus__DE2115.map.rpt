@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MORSEus__DE2115
-Sat Oct 06 12:14:04 2018
+Mon Oct 15 21:19:57 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -49,13 +49,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 06 12:14:04 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 15 21:19:57 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; MORSEus__DE2115                             ;
 ; Top-level Entity Name              ; MORSEus__DE2115                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 47                                          ;
-;     Total combinational functions  ; 47                                          ;
+; Total logic elements               ; 49                                          ;
+;     Total combinational functions  ; 49                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 74                                          ;
@@ -168,14 +168,14 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; codifMorse.v                     ; yes             ; User Verilog HDL File        ; C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v      ;         ;
-; morseus__de2115.v                ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; codifMorse.v                     ; yes             ; User Verilog HDL File        ; C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v      ;         ;
+; morseus__de2115.v                ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -183,16 +183,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 47           ;
+; Estimated Total logic elements              ; 49           ;
 ;                                             ;              ;
-; Total combinational functions               ; 47           ;
+; Total combinational functions               ; 49           ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 31           ;
-;     -- 3 input functions                    ; 5            ;
-;     -- <=2 input functions                  ; 11           ;
+;     -- 4 input functions                    ; 35           ;
+;     -- 3 input functions                    ; 2            ;
+;     -- <=2 input functions                  ; 12           ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 47           ;
+;     -- normal mode                          ; 49           ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 0            ;
@@ -205,8 +205,8 @@ refer to the applicable agreement for further details.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; SW[16]~input ;
 ; Maximum fan-out                             ; 18           ;
-; Total fan-out                               ; 245          ;
-; Average fan-out                             ; 1.26         ;
+; Total fan-out                               ; 254          ;
+; Average fan-out                             ; 1.29         ;
 +---------------------------------------------+--------------+
 
 
@@ -215,32 +215,34 @@ refer to the applicable agreement for further details.
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name     ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-----------------+--------------+
-; |MORSEus__DE2115            ; 47 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MORSEus__DE2115                        ; MORSEus__DE2115 ; work         ;
+; |MORSEus__DE2115            ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MORSEus__DE2115                        ; MORSEus__DE2115 ; work         ;
 ;    |codifMorse:codificador| ; 39 (39)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|codifMorse:codificador ; codifMorse      ; work         ;
 ;    |demuxDisplay:demux0|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|demuxDisplay:demux0    ; demuxDisplay    ; work         ;
 ;    |demuxDisplay:demux1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|demuxDisplay:demux1    ; demuxDisplay    ; work         ;
 ;    |demuxDisplay:demux2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|demuxDisplay:demux2    ; demuxDisplay    ; work         ;
 ;    |demuxDisplay:demux3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|demuxDisplay:demux3    ; demuxDisplay    ; work         ;
+;    |demuxDisplay:demux4|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MORSEus__DE2115|demuxDisplay:demux4    ; demuxDisplay    ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                          ;
-+----------------------------------------------------+--------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal            ; Free of Timing Hazards ;
-+----------------------------------------------------+--------------------------------+------------------------+
-; codifMorse:codificador|morse[0]                    ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|display[0]                  ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|display[1]                  ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|morse[1]                    ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|display[2]                  ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|morse[2]                    ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|display[3]                  ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|morse[3]                    ; codifMorse:codificador|always0 ; yes                    ;
-; codifMorse:codificador|morse[4]                    ; codifMorse:codificador|always0 ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                                ;                        ;
-+----------------------------------------------------+--------------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; codifMorse:codificador|display[0]                   ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|morse[0]                     ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|display[1]                   ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|morse[1]                     ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|display[2]                   ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|morse[2]                     ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|display[3]                   ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|morse[3]                     ; codifMorse:codificador|always0 ; yes                    ;
+; codifMorse:codificador|display[4]                   ; GND                            ; yes                    ;
+; codifMorse:codificador|morse[4]                     ; codifMorse:codificador|always0 ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -319,16 +321,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 74                          ;
-; cycloneiii_lcell_comb ; 57                          ;
-;     normal            ; 57                          ;
+; cycloneiii_lcell_comb ; 60                          ;
+;     normal            ; 60                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 9                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 31                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 35                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.82                        ;
+; Average LUT depth     ; 2.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -337,7 +339,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -347,121 +349,119 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct 06 12:13:53 2018
+    Info: Processing started: Mon Oct 15 21:19:38 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MORSEus__DE2115 -c MORSEus__DE2115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 4 design units, including 4 entities, in source file codifmorse.v
-    Info (12023): Found entity 1: codifMorse File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 1
-    Info (12023): Found entity 2: demuxDisplay File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 58
-    Info (12023): Found entity 3: sevSeg File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 73
-    Info (12023): Found entity 4: desligaSeg File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 89
+    Info (12023): Found entity 1: codifMorse File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 1
+    Info (12023): Found entity 2: demuxDisplay File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 73
+    Info (12023): Found entity 3: sevSeg File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 89
+    Info (12023): Found entity 4: desligaSeg File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 106
 Warning (12125): Using design file morseus__de2115.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: MORSEus__DE2115 File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 6
+    Info (12023): Found entity 1: MORSEus__DE2115 File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 6
 Info (12127): Elaborating entity "MORSEus__DE2115" for the top level hierarchy
-Info (12128): Elaborating entity "codifMorse" for hierarchy "codifMorse:codificador" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 41
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(17): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(19): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(20): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(21): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(23): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(24): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(25): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(27): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(28): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(30): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(32): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 32
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(37): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 37
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(39): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(41): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 41
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(42): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 42
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(44): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 44
-Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(48): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 48
-Warning (10240): Verilog HDL Always Construct warning at codifMorse.v(16): inferring latch(es) for variable "morse", which holds its previous value in one or more paths through the always construct File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Warning (10240): Verilog HDL Always Construct warning at codifMorse.v(16): inferring latch(es) for variable "display", which holds its previous value in one or more paths through the always construct File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "display[0]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "display[1]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "display[2]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "display[3]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "display[4]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "morse[0]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "morse[1]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "morse[2]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "morse[3]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (10041): Inferred latch for "morse[4]" at codifMorse.v(16) File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 16
-Info (12128): Elaborating entity "demuxDisplay" for hierarchy "demuxDisplay:demux4" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 43
-Info (12128): Elaborating entity "sevSeg" for hierarchy "sevSeg:demuxfpga4" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 49
-Info (12128): Elaborating entity "desligaSeg" for hierarchy "desligaSeg:desligaDisFPGA1" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 55
+Info (12128): Elaborating entity "codifMorse" for hierarchy "codifMorse:codificador" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(22): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(23): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(24): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(26): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(27): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(28): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(30): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(31): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(33): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(35): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 35
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(41): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 41
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(43): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 43
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(45): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(46): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 46
+Warning (10235): Verilog HDL Always Construct warning at codifMorse.v(48): variable "num" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 48
+Warning (10240): Verilog HDL Always Construct warning at codifMorse.v(17): inferring latch(es) for variable "morse", which holds its previous value in one or more paths through the always construct File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at codifMorse.v(17): inferring latch(es) for variable "display", which holds its previous value in one or more paths through the always construct File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "display[0]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "display[1]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "display[2]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "display[3]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "display[4]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "morse[0]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "morse[1]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "morse[2]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "morse[3]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (10041): Inferred latch for "morse[4]" at codifMorse.v(17) File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/codifMorse.v Line: 17
+Info (12128): Elaborating entity "demuxDisplay" for hierarchy "demuxDisplay:demux4" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 43
+Info (12128): Elaborating entity "sevSeg" for hierarchy "sevSeg:demuxfpga4" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 49
+Info (12128): Elaborating entity "desligaSeg" for hierarchy "desligaSeg:desligaDisFPGA1" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 55
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
-    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
-    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
-    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
-    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
-    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
-    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
-    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
-    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
-    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
-    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
-    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
-    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
-    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[3]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
-    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[1]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[2]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
-    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 12
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 13
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 14
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 15
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 16
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 17
+    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[3]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 18
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/mateu/Documents/github/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
-Info (21057): Implemented 121 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[10]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Users/mateu/Desktop/ISL-TP01-Conversao-para-Codigo-Morse/morseus__de2115.v Line: 9
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 47 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Sat Oct 06 12:14:04 2018
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 49 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Mon Oct 15 21:19:57 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:25
 
 

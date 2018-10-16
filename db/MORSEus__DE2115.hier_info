@@ -192,13 +192,20 @@ display[0] <= display[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 display[1] <= display[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 display[2] <= display[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 display[3] <= display[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-display[4] <= <VCC>
+display[4] <= display[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+reset => display[4].IN1
+reset => display[0]$latch.ACLR
+reset => display[1]$latch.ACLR
+reset => display[2]$latch.ACLR
+reset => display[3]$latch.ACLR
 reset => morse[0]$latch.ACLR
 reset => morse[1]$latch.ACLR
 reset => morse[2]$latch.ACLR
 reset => morse[3]$latch.ACLR
 reset => morse[4]$latch.ACLR
+reset => comb.IN1
 reset => always0.IN0
+reset => comb.IN1
 ready => always0.IN1
 
 

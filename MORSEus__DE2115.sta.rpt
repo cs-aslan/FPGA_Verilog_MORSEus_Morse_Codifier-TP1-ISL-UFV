@@ -1,5 +1,5 @@
 Timing Analyzer report for MORSEus__DE2115
-Sat Oct 06 12:14:24 2018
+Mon Oct 15 21:20:33 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,43 +18,36 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Slow 1200mV 85C Model Recovery Summary
  11. Slow 1200mV 85C Model Removal Summary
  12. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 13. Slow 1200mV 85C Model Recovery: 'SW[1]'
- 14. Slow 1200mV 85C Model Removal: 'SW[1]'
- 15. Slow 1200mV 85C Model Metastability Summary
- 16. Slow 1200mV 0C Model Fmax Summary
- 17. Slow 1200mV 0C Model Setup Summary
- 18. Slow 1200mV 0C Model Hold Summary
- 19. Slow 1200mV 0C Model Recovery Summary
- 20. Slow 1200mV 0C Model Removal Summary
- 21. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 22. Slow 1200mV 0C Model Recovery: 'SW[1]'
- 23. Slow 1200mV 0C Model Removal: 'SW[1]'
- 24. Slow 1200mV 0C Model Metastability Summary
- 25. Fast 1200mV 0C Model Setup Summary
- 26. Fast 1200mV 0C Model Hold Summary
- 27. Fast 1200mV 0C Model Recovery Summary
- 28. Fast 1200mV 0C Model Removal Summary
- 29. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 30. Fast 1200mV 0C Model Recovery: 'SW[1]'
- 31. Fast 1200mV 0C Model Removal: 'SW[1]'
- 32. Fast 1200mV 0C Model Metastability Summary
- 33. Multicorner Timing Analysis Summary
- 34. Board Trace Model Assignments
- 35. Input Transition Times
- 36. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 37. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 38. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 39. Recovery Transfers
- 40. Removal Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
- 47. Unconstrained Input Ports
- 48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 13. Slow 1200mV 85C Model Metastability Summary
+ 14. Slow 1200mV 0C Model Fmax Summary
+ 15. Slow 1200mV 0C Model Setup Summary
+ 16. Slow 1200mV 0C Model Hold Summary
+ 17. Slow 1200mV 0C Model Recovery Summary
+ 18. Slow 1200mV 0C Model Removal Summary
+ 19. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1200mV 0C Model Metastability Summary
+ 21. Fast 1200mV 0C Model Setup Summary
+ 22. Fast 1200mV 0C Model Hold Summary
+ 23. Fast 1200mV 0C Model Recovery Summary
+ 24. Fast 1200mV 0C Model Removal Summary
+ 25. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Fast 1200mV 0C Model Metastability Summary
+ 27. Multicorner Timing Analysis Summary
+ 28. Board Trace Model Assignments
+ 29. Input Transition Times
+ 30. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 31. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 32. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 33. Clock Transfers
+ 34. Report TCCS
+ 35. Report RSKM
+ 36. Unconstrained Paths Summary
+ 37. Clock Status Summary
+ 38. Unconstrained Input Ports
+ 39. Unconstrained Output Ports
+ 40. Unconstrained Input Ports
+ 41. Unconstrained Output Ports
+ 42. Timing Analyzer Messages
 
 
 
@@ -99,12 +92,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -113,7 +106,7 @@ refer to the applicable agreement for further details.
 +---------------------+--------+--------------------------+
 ; SDC File Path       ; Status ; Read at                  ;
 +---------------------+--------+--------------------------+
-; MORSEus__DE2115.SDC ; OK     ; Sat Oct 06 12:14:22 2018 ;
+; MORSEus__DE2115.SDC ; OK     ; Mon Oct 15 21:20:30 2018 ;
 +---------------------+--------+--------------------------+
 
 
@@ -122,7 +115,6 @@ refer to the applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
-; SW[0]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[0] } ;
 ; SW[1]      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[1] } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
@@ -151,22 +143,16 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
+------------------------------------------
 ; Slow 1200mV 85C Model Recovery Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; SW[1] ; -1.835 ; -9.141                ;
-+-------+--------+-----------------------+
+------------------------------------------
+No paths to report.
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Slow 1200mV 85C Model Removal Summary ;
-+-------+-------+-----------------------+
-; Clock ; Slack ; End Point TNS         ;
-+-------+-------+-----------------------+
-; SW[1] ; 1.431 ; 0.000                 ;
-+-------+-------+-----------------------+
+-----------------------------------------
+No paths to report.
 
 
 +---------------------------------------------------+
@@ -174,45 +160,8 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; SW[0] ; -3.000 ; -3.000                           ;
 ; SW[1] ; -3.000 ; -3.000                           ;
 +-------+--------+----------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Recovery: 'SW[1]'                                                                                    ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.835 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.500        ; 2.098      ; 3.562      ;
-; -1.834 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.500        ; 2.099      ; 3.561      ;
-; -1.826 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.500        ; 2.102      ; 3.557      ;
-; -1.823 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.500        ; 2.103      ; 3.556      ;
-; -1.823 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.500        ; 2.103      ; 3.556      ;
-; -1.532 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 1.000        ; 2.098      ; 3.759      ;
-; -1.531 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 1.000        ; 2.099      ; 3.758      ;
-; -1.522 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 1.000        ; 2.102      ; 3.753      ;
-; -1.519 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 1.000        ; 2.103      ; 3.752      ;
-; -1.519 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 1.000        ; 2.103      ; 3.752      ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Removal: 'SW[1]'                                                                                    ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.431 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.000        ; 2.160      ; 3.631      ;
-; 1.431 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.000        ; 2.160      ; 3.631      ;
-; 1.433 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.000        ; 2.159      ; 3.632      ;
-; 1.441 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.000        ; 2.156      ; 3.637      ;
-; 1.443 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.000        ; 2.155      ; 3.638      ;
-; 1.733 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; -0.500       ; 2.160      ; 3.433      ;
-; 1.733 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; -0.500       ; 2.160      ; 3.433      ;
-; 1.735 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; -0.500       ; 2.159      ; 3.434      ;
-; 1.742 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; -0.500       ; 2.156      ; 3.438      ;
-; 1.744 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; -0.500       ; 2.155      ; 3.439      ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 -----------------------------------------------
@@ -239,22 +188,16 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Slow 1200mV 0C Model Recovery Summary ;
-+-------+--------+----------------------+
-; Clock ; Slack  ; End Point TNS        ;
-+-------+--------+----------------------+
-; SW[1] ; -1.691 ; -8.423               ;
-+-------+--------+----------------------+
+-----------------------------------------
+No paths to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Slow 1200mV 0C Model Removal Summary ;
-+-------+-------+----------------------+
-; Clock ; Slack ; End Point TNS        ;
-+-------+-------+----------------------+
-; SW[1] ; 1.285 ; 0.000                ;
-+-------+-------+----------------------+
+----------------------------------------
+No paths to report.
 
 
 +--------------------------------------------------+
@@ -262,45 +205,8 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; SW[0] ; -3.000 ; -3.000                          ;
 ; SW[1] ; -3.000 ; -3.000                          ;
 +-------+--------+---------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Recovery: 'SW[1]'                                                                                     ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.691 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.500        ; 1.930      ; 3.329      ;
-; -1.691 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.500        ; 1.930      ; 3.330      ;
-; -1.682 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.500        ; 1.934      ; 3.325      ;
-; -1.680 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.500        ; 1.934      ; 3.324      ;
-; -1.679 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.500        ; 1.935      ; 3.324      ;
-; -1.288 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 1.000        ; 1.930      ; 3.426      ;
-; -1.288 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 1.000        ; 1.930      ; 3.427      ;
-; -1.278 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 1.000        ; 1.934      ; 3.421      ;
-; -1.276 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 1.000        ; 1.934      ; 3.420      ;
-; -1.275 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 1.000        ; 1.935      ; 3.420      ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Removal: 'SW[1]'                                                                                     ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.285 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.000        ; 1.986      ; 3.311      ;
-; 1.286 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.000        ; 1.985      ; 3.311      ;
-; 1.288 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.000        ; 1.984      ; 3.312      ;
-; 1.296 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.000        ; 1.981      ; 3.317      ;
-; 1.298 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.000        ; 1.980      ; 3.318      ;
-; 1.686 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; -0.500       ; 1.986      ; 3.212      ;
-; 1.687 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; -0.500       ; 1.985      ; 3.212      ;
-; 1.689 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; -0.500       ; 1.984      ; 3.213      ;
-; 1.696 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; -0.500       ; 1.981      ; 3.217      ;
-; 1.697 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; -0.500       ; 1.980      ; 3.217      ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -321,22 +227,16 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Fast 1200mV 0C Model Recovery Summary ;
-+-------+--------+----------------------+
-; Clock ; Slack  ; End Point TNS        ;
-+-------+--------+----------------------+
-; SW[1] ; -0.377 ; -1.847               ;
-+-------+--------+----------------------+
+-----------------------------------------
+No paths to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Fast 1200mV 0C Model Removal Summary ;
-+-------+-------+----------------------+
-; Clock ; Slack ; End Point TNS        ;
-+-------+-------+----------------------+
-; SW[1] ; 0.572 ; 0.000                ;
-+-------+-------+----------------------+
+----------------------------------------
+No paths to report.
 
 
 +--------------------------------------------------+
@@ -344,45 +244,8 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; SW[1] ; -3.000 ; -6.336                          ;
-; SW[0] ; -3.000 ; -3.242                          ;
+; SW[1] ; -3.000 ; -4.603                          ;
 +-------+--------+---------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Recovery: 'SW[1]'                                                                                     ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.377 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 1.000        ; 1.437      ; 2.382      ;
-; -0.375 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 1.000        ; 1.438      ; 2.381      ;
-; -0.367 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 1.000        ; 1.441      ; 2.376      ;
-; -0.365 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 1.000        ; 1.442      ; 2.375      ;
-; -0.363 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 1.000        ; 1.442      ; 2.374      ;
-; -0.146 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.500        ; 1.437      ; 1.651      ;
-; -0.144 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.500        ; 1.438      ; 1.650      ;
-; -0.137 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.500        ; 1.441      ; 1.646      ;
-; -0.135 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.500        ; 1.442      ; 1.645      ;
-; -0.134 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.500        ; 1.442      ; 1.645      ;
-+--------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Removal: 'SW[1]'                                                                                     ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.572 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; -0.500       ; 1.472      ; 1.584      ;
-; 0.573 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; -0.500       ; 1.471      ; 1.584      ;
-; 0.575 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; -0.500       ; 1.470      ; 1.585      ;
-; 0.582 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; -0.500       ; 1.467      ; 1.589      ;
-; 0.584 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; -0.500       ; 1.466      ; 1.590      ;
-; 0.796 ; SW[0]     ; codifMorse:codificador|morse[4] ; SW[0]        ; SW[1]       ; 0.000        ; 1.472      ; 2.308      ;
-; 0.798 ; SW[0]     ; codifMorse:codificador|morse[2] ; SW[0]        ; SW[1]       ; 0.000        ; 1.471      ; 2.309      ;
-; 0.800 ; SW[0]     ; codifMorse:codificador|morse[3] ; SW[0]        ; SW[1]       ; 0.000        ; 1.470      ; 2.310      ;
-; 0.807 ; SW[0]     ; codifMorse:codificador|morse[0] ; SW[0]        ; SW[1]       ; 0.000        ; 1.467      ; 2.314      ;
-; 0.809 ; SW[0]     ; codifMorse:codificador|morse[1] ; SW[0]        ; SW[1]       ; 0.000        ; 1.466      ; 2.315      ;
-+-------+-----------+---------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -396,12 +259,10 @@ No synchronizer chains to report.
 +------------------+-------+------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; -1.835   ; 0.572   ; -3.000              ;
-;  SW[0]           ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
-;  SW[1]           ; N/A   ; N/A  ; -1.835   ; 0.572   ; -3.000              ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; -9.141   ; 0.0     ; -9.578              ;
-;  SW[0]           ; N/A   ; N/A  ; N/A      ; N/A     ; -3.242              ;
-;  SW[1]           ; N/A   ; N/A  ; -9.141   ; 0.000   ; -6.336              ;
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+;  SW[1]           ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -4.603              ;
+;  SW[1]           ; N/A   ; N/A  ; N/A      ; N/A     ; -4.603              ;
 +------------------+-------+------+----------+---------+---------------------+
 
 
@@ -486,14 +347,14 @@ No synchronizer chains to report.
 ; SW[9]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[10]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[11]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[15]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[14]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[12]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[13]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[1]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[16]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[17]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[13]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[14]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[15]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[1]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[12]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -698,24 +559,10 @@ No synchronizer chains to report.
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------+
-; Recovery Transfers                                                ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; SW[0]      ; SW[1]    ; 0        ; 0        ; 5        ; 5        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Removal Transfers                                                 ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; SW[0]      ; SW[1]    ; 0        ; 0        ; 5        ; 5        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -737,10 +584,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 6     ; 6    ;
-; Unconstrained Input Port Paths  ; 49    ; 49   ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 59    ; 59   ;
 ; Unconstrained Output Ports      ; 10    ; 10   ;
-; Unconstrained Output Port Paths ; 18    ; 18   ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
 +---------------------------------+-------+------+
 
 
@@ -749,7 +596,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+-------+------+-------------+
 ; Target ; Clock ; Type ; Status      ;
 +--------+-------+------+-------------+
-; SW[0]  ; SW[0] ; Base ; Constrained ;
 ; SW[1]  ; SW[1] ; Base ; Constrained ;
 +--------+-------+------+-------------+
 
@@ -759,6 +605,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -791,6 +638,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -824,88 +672,66 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Oct 06 12:14:21 2018
+    Info: Processing started: Mon Oct 15 21:20:28 2018
 Info: Command: quartus_sta MORSEus__DE2115 -c MORSEus__DE2115
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
-Warning (335093): The Timing Analyzer is analyzing 9 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 10 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332104): Reading SDC File: 'MORSEus__DE2115.SDC'
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name SW[0] SW[0]
     Info (332105): create_clock -period 1.000 -name SW[1] SW[1]
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case recovery slack is -1.835
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -1.835              -9.141 SW[1] 
-Info (332146): Worst-case removal slack is 1.431
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.431               0.000 SW[1] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -3.000 SW[0] 
     Info (332119):    -3.000              -3.000 SW[1] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case recovery slack is -1.691
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -1.691              -8.423 SW[1] 
-Info (332146): Worst-case removal slack is 1.285
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.285               0.000 SW[1] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -3.000 SW[0] 
     Info (332119):    -3.000              -3.000 SW[1] 
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case recovery slack is -0.377
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.377              -1.847 SW[1] 
-Info (332146): Worst-case removal slack is 0.572
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.572               0.000 SW[1] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -6.336 SW[1] 
-    Info (332119):    -3.000              -3.242 SW[0] 
+    Info (332119):    -3.000              -4.603 SW[1] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Sat Oct 06 12:14:24 2018
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Mon Oct 15 21:20:33 2018
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 
 
